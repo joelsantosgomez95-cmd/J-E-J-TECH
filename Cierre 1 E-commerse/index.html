@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEJ TECH - Tienda de Laptops</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="2ec02d2c-5359-495a-9356-62a1ba0d139a.png" alt="Logo JEJ TECH">
+        </div>
+
+        <nav>
+            <a href="#inicio">
+                <i class="fa-solid fa-house" aria-hidden="true"></i>
+                Inicio
+            </a>
+            <a href="#productos">
+                <i class="fa-solid fa-laptop" aria-hidden="true"></i>
+                Laptops
+            </a>
+            <a href="#carrito">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                Carrito
+            </a>
+            <a href="#sobre-nosotros">
+                <i class="fa-solid fa-users" aria-hidden="true"></i>
+                Sobre Nosotros
+            </a>
+            <a href="#contacto">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                Contacto
+            </a>
+        </nav>
+
+        <div class="iconos">
+            <span id="cantidad" aria-live="polite" aria-label="Productos en el carrito">0</span>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="inicio" class="inicio">
+
+            <div class="texto-inicio">
+                <p class="subtitulo">TU LAPTOP, TU MEJOR ALIADO</p>
+
+                <h1>
+                    Las mejores
+                    <span>laptops</span>
+                    al mejor precio
+                </h1>
+
+                <p>
+                    Rendimiento, calidad y confianza
+                    en un solo lugar.
+                </p>
+
+                <a href="#productos" class="boton">
+                    Ver ofertas <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <div class="imagen-principal">
+                <img src="laptop-principal-sin-fondo.png" alt="Laptop principal">
+            </div>
+
+            <div class="beneficios">
+                <p><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Productos garantizados</p>
+                <p><i class="fa-solid fa-truck-fast" aria-hidden="true"></i> Envíos a todo el país</p>
+                <p><i class="fa-solid fa-headset" aria-hidden="true"></i> Soporte técnico</p>
+            </div>
+
+        </section>
+
+        <section class="categorias">
+
+            <div><i class="fa-solid fa-laptop" aria-hidden="true"></i><h3>Todas</h3></div>
+            <div><i class="fa-brands fa-windows" aria-hidden="true"></i><h3>Windows</h3></div>
+            <div><i class="fa-brands fa-apple" aria-hidden="true"></i><h3>MacBook</h3></div>
+            <div><i class="fa-solid fa-gamepad" aria-hidden="true"></i><h3>Gaming</h3></div>
+            <div><i class="fa-solid fa-briefcase" aria-hidden="true"></i><h3>Trabajo / Estudio</h3></div>
+
+        </section>
+
+        <section id="productos" class="productos">
+
+            <h2>Laptops destacadas</h2>
+
+            <div class="filtros">
+
+                <input
+                    type="text"
+                    id="buscar"
+                    placeholder="Buscar laptop..."
+                    aria-label="Buscar laptop"
+                >
+
+                <select id="categoria" aria-label="Filtrar por categoría">
+                    <option value="Todas">Todas las categorías</option>
+                    <option value="Windows">Windows</option>
+                    <option value="MacBook">MacBook</option>
+                    <option value="Gaming">Gaming</option>
+                    <option value="Trabajo">Trabajo / Estudio</option>
+                </select>
+
+                <select id="precio" aria-label="Filtrar por precio">
+                    <option value="Todos">Todos los precios</option>
+                    <option value="30000">Hasta RD$30,000</option>
+                    <option value="50000">Hasta RD$50,000</option>
+                </select>
+
+            </div>
+
+            <div class="contenedor-productos" id="lista-productos">
+
+                <div class="producto" data-categoria="Windows">
+
+                    <img src="Captura de pantalla 2026-11-01 215500.png" alt="HP Pavilion 15">
+
+                    <h3>HP Pavilion 15</h3>
+
+                    <p>Intel Core i5 · 8GB RAM</p>
+                    <p>512GB SSD</p>
+
+                    <h4>RD$28,990</h4>
+
+                    <button onclick="agregarCarrito(1)">
+                        <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Agregar al carrito
+                    </button>
+
+                </div>
+
+                <div class="producto" data-categoria="MacBook">
+
+                    <img src="images (4).jpg" alt="MacBook Air M2">
+
+                    <h3>MacBook Air M2</h3>
+
+                    <p>Apple M2 · 8GB RAM</p>
+                    <p>256GB SSD</p>
+
+                    <h4>RD$54,990</h4>
+
+                    <button onclick="agregarCarrito(2)">
+                        <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Agregar al carrito
+                    </button>
+
+                </div>
+
+                <div class="producto" data-categoria="Windows">
+
+                    <img src="images (3).jpg" alt="Lenovo IdeaPad 3">
+
+                    <h3>Lenovo IdeaPad 3</h3>
+
+                    <p>Ryzen 5 · 8GB RAM</p>
+                    <p>512GB SSD</p>
+
+                    <h4>RD$22,990</h4>
+
+                    <button onclick="agregarCarrito(3)">
+                        <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Agregar al carrito
+                    </button>
+
+                </div>
+
+                <div class="producto" data-categoria="Gaming">
+
+                    <img src="images (2).jpg" alt="Acer Nitro 5">
+
+                    <h3>Acer Nitro 5</h3>
+
+                    <p>Intel Core i7 · 16GB RAM</p>
+                    <p>512GB SSD</p>
+
+                    <h4>RD$45,990</h4>
+
+                    <button onclick="agregarCarrito(4)">
+                        <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Agregar al carrito
+                    </button>
+
+                </div>
+
+                <div class="producto" data-categoria="Windows">
+
+                    <img src="images (3).jpg" alt="ASUS Vivobook 15">
+
+                    <h3>ASUS Vivobook 15</h3>
+
+                    <p>Intel Core i5 · 8GB RAM</p>
+                    <p>512GB SSD</p>
+
+                    <h4>RD$26,990</h4>
+
+                    <button onclick="agregarCarrito(5)">
+                        <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Agregar al carrito
+                    </button>
+
+                </div>
+
+                <div class="producto" data-categoria="Windows">
+
+                    <img src="images (5).jpg" alt="Dell Inspiron 15">
+
+                    <h3>Dell Inspiron 15</h3>
+
+                    <p>Intel Core i5 · 8GB R5AM</p>
+                    <p>512GB SSD</p>
+
+                    <h4>RD$30,990</h4>
+
+                    <button onclick="agregarCarrito(6)">
+                        <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Agregar al carrito
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="carrito" class="carrito">
+
+            <h2>Mi carrito de compras</h2>
+
+            <div id="productos-carrito">
+                <p>Tu carrito está vacío.</p>
+            </div>
+
+            <div class="total">
+                <h3>Total de compra:</h3>
+                <h3 id="total">RD$0</h3>
+            </div>
+
+            <button onclick="vaciarCarrito()" class="btn-vaciar">
+                Vaciar carrito
+            </button>
+
+            <button onclick="finalizarCompra()" class="btn-comprar">
+                Finalizar compra
+            </button>
+
+        </section>
+
+        <section id="sobre-nosotros" class="sobre-nosotros">
+
+            <h2>Sobre Nosotros</h2>
+
+            <p>
+                JEJ TECH es una tienda dedicada a la venta de
+                laptops y equipos tecnológicos. Nuestro objetivo
+                es ofrecer productos de calidad a buenos precios,
+                brindando confianza y una buena atención a
+                nuestros clientes.
+            </p>
+
+            <h3>Nuestra misión</h3>
+
+            <p>
+                Ofrecer soluciones tecnológicas que ayuden a las
+                personas en sus estudios, trabajos y actividades
+                diarias.
+            </p>
+
+        </section>
+
+        <section id="contacto" class="contacto">
+
+            <h2>Contáctanos</h2>
+
+            <p>Completa el formulario para comunicarte con nosotros.</p>
+
+            <form id="formulario">
+
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" placeholder="ejemplo@gmail.com" required>
+
+                <label for="direccion">Dirección de envío:</label>
+                <input type="text" id="direccion" placeholder="Escribe tu dirección" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" placeholder="Escribe tu mensaje"></textarea>
+
+                <button type="submit">Enviar información</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-columna">
+
+            <img src="2ec02d2c-5359-495a-9356-62a1ba0d139a.png" alt="Logo JEJ TECH">
+
+            <p>Tecnología que te impulsa al futuro.</p>
+
+        </div>
+
+        <div class="footer-columna">
+
+            <h3>Enlaces rápidos</h3>
+
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Laptops</a>
+            <a href="#carrito">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                Carrito
+            </a>
+            <a href="#contacto">Contacto</a>
+
+        </div>
+
+        <div class="footer-columna">
+
+            <h3>Marcas</h3>
+
+            <p>HP</p>
+            <p>Dell</p>
+            <p>Lenovo</p>
+            <p>ASUS</p>
+            <p>Apple</p>
+
+        </div>
+
+        <div class="footer-columna">
+
+            <h3>Contacto</h3>
+
+            <p><i class="fa-solid fa-phone" aria-hidden="true"></i> +1 (809) 555-0123</p>
+            <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> ventas@jejtech.com</p>
+            <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Altamira Puerto Plata, RD</p>
+            <p>Horario: 8:00 a.m. - 6:00 p.m.</p>
+
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+        © 2026 JEJ TECH. Todos los derechos reservados.
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
